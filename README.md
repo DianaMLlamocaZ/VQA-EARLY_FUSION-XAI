@@ -2,5 +2,6 @@
 
 # DESCRIPCIÓN
 - Se desarrolló un modelo *Visual-Question-Answering*, utilizando una red neuronal convolucional para la extracción de *features* de imágenes y un *Multilayer Perceptron* de tres capas lineales *fully connected*, seguidas por la función de activación ReLU, para generar *embeddings* de texto a partir de representaciones *Bag of Words*.
-- La técnica utilizada para combinar las modalidades de imágenes y texto fue *Early Fusion*, a través de la concatenación de vectores.
-- Asimismo, se emplearon métricas de *clustering* para medir la agrupación entre *embeddings* de texto respecto a temas/preguntas y su visualización en un espacio bidimensional mediante el algoritmo t-SNE. Además, se utilizó una técnica de *Explainable AI (XAI)* como GradCAM para visualizar las regiones de la imagen que más influyeron en la clasificación de la red neuronal convolucional.
+- La técnica utilizada para combinar las modalidades de imágenes y texto fue *Early Fusion*, a través de la multiplicación de los vectores de ambas modaidades.
+- Asimismo, se emplearon métricas de *clustering* como *Silhoutte Score* (intra-inter cluster) para medir la agrupación entre *embeddings* de texto respecto a temas/preguntas y su visualización en un espacio bidimensional mediante el algoritmo t-SNE.
+- Además, se utilizó *Grad-CAM*, un método de *Explainable AI (XAI)*, para visualizar las regiones de la imagen que más influyeron en la clasificación de la red neuronal convolucional.
