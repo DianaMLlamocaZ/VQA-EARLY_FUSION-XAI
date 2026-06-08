@@ -1,4 +1,4 @@
-# <div align="center"> Visual Question Answering con Early Fusion e Inteligencia Artificial Explicable </div>
+# <div align="center"> VISUAL QUESTION ANSWERING CON EARLY FUSION E INTELIGENCIA ARTIFICIAL EXPLICABLE </div>
 
 # 1) DESCRIPCIÓN
 - Se desarrolló un modelo *Visual-Question-Answering*, utilizando una red neuronal convolucional para la extracción de *features* de imágenes y un *Multilayer Perceptron* de tres capas lineales *fully connected* seguidas por la función de activación ReLU, para generar *embeddings* de texto a partir de representaciones *Bag of Words*.
