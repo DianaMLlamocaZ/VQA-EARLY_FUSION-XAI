@@ -22,3 +22,5 @@
 <div align="center">
   <img src="./imgs/Architecture_Image_Encoder.jpg">
 </div>
+
+- **Kernels:** Se entrenaron modelos con diferentes tamaños de **kernels** en la primera capa convolucional: 16 y 32. Por ello, se detalla en la arquitectura. 
