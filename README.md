@@ -19,3 +19,6 @@
 - **Embedding Representation Layer:** 32 (los embeddings de texto se proyectan a 32 dimensiones para realizar early fusion con las imágenes mediante la multiplicación de vectores de ambas modalidades).
 
 ## 2.2) *IMAGE ENCODER*
+<div align="center">
+  <img src="./imgs/Architecture_Image_Encoder.jpg">
+</div>
