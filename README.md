@@ -28,3 +28,11 @@
 - **Flatten:** Se aplica la operación *flatten* a la última capa convolucional para convertir los *feature maps* en un vector y proyectarlo a una dimensión de 32 mediante una capa lineal, y realizar early fusion con los embeddings de texto mediante la multiplicación de vectores de ambas modalidades.
 
 ## 2.3) *FUSION STRATEGY*
+
+- Se utiliza la estrategia de *Early Fusion* mediante la multiplicación elemento a elemento de los *embeddings* (vectores) de imagen y texto, ambos de dimensión 32, obteniendo una representación conjunta multimodal.
+
+## 2.4) *PREDICTION LAYER*
+
+- La representación fusionada se procesa mediante una red *feed-forward* compuesta por dos capas lineales:
+    - La primera capa reduce la dimensionalidad de 32 a 16, seguida de una función de activación ReLU
+    - La segunda capa proyecta de 16 a 13 dimensiones, correspondientes al número de clases o respuestas posibles.
