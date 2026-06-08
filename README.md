@@ -16,4 +16,4 @@
 </div>
 
 - Tamaño del vector Bag of Words: 27 (correspondiente al vocabulario del dataset).
-- Embedding Layer Representation: 32 (Los embeddings de texto se mapean a un vector de 32, ya que los vectores de las imágenes, luego de pasar por las capas convolucionales, se proyectan a una dimensión de 32 mediante una capa lineal, para posteriormente realizar la Early Fusion mediante la multiplicación de vectores de ambas modalidades).
+- Embedding Layer Representation: 32 (los embeddings de texto se proyectan a 32 dimensiones para realizar early fusion con las imágenes mediante la multiplicación de ambas modalidades).
