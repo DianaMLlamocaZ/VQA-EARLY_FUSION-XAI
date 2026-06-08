@@ -11,3 +11,6 @@
 # 2) ARQUITECTURA DEL MODELO
 
 ## 2.1) *TEXT ENCODER*
+<div align="center">
+  <img src="./imgs/Architecture_Text_Encoder.jpg">
+</div>
