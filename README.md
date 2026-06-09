@@ -62,21 +62,21 @@ El dataset [link]
 
 ## 5.1) PREPROCESAMIENTO:
 
-   - **5.1.1) Imágenes:**
+- **5.1.1) Imágenes:**
      
-	    - Se realiza un resize de 64x64.
+	 - Se realiza un resize de 64x64.
 	    
-		- Se reescala a un rango de 0-1.
+	- Se reescala a un rango de 0-1.
 		
-		- Posteriormente, se convierte en un tensor para entrenar el modelo.
+	- Posteriormente, se convierte en un tensor para entrenar el modelo.
 	 
-   - **5.1.2) Texto:**
+- **5.1.2) Texto:**
      
-		- Se realiza una tokenización a nivel de palabra, considerando también incluyendo el signo de puntuación ? como un token independiente.
+- Se realiza una tokenización a nivel de palabra, considerando también incluyendo el signo de puntuación ? como un token independiente.
 
-     	- Cada texto de entrada se convierte en un vector numérico utilizando la técnica *Bag of Words*.
+  - Cada texto de entrada se convierte en un vector numérico utilizando la técnica *Bag of Words*.
 
-     	- Finalmente, el vector resultante se transforma en un tensor para el entrenamiento del modelo. 
+    - Finalmente, el vector resultante se transforma en un tensor para el entrenamiento del modelo. 
 
 ## 5.2) DIVISIÓN DE DATOS
 
