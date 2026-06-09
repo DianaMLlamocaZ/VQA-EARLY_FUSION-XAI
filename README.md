@@ -121,3 +121,11 @@ El dataset [link]
 | 16 --> 32 (MaxPool2D+ReLU) | 64                 | 64                 | - Seed fija <br> - No Class Weight <br> - Multiplicación de features (Fusion)                         |                                                                   |                                                                   |                                                                   |
 | 16 --> 32 (MaxPool2D+ReLU) | 64                 | 64                 | - Seed fija <br> - Class Weight <br> - Multiplicación de features (Fusion)                            | 0.39 - (shape1) <br> 0.43 - (shape2) <br> 0.47 - (shape3) <br> | 0.25 - (shape1) <br> 0.49 - (shape2) <br> 0.58 - (shape3) <br> | 0.30 - (shape1) <br> 0.46 - (shape2) <br> 0.52 - (shape3) <br> |
 | 32 --> 32 (MaxPool2D+ReLU) | 64                 | 64                 | - Seed fija <br> - Class Weight <br> - Layer Normalization <br> - Multiplicación de features (Fusion) | 0.98 - (shape1) <br> 0.97 - (shape2) <br> 0.99 - (shape3) <br> | 0.96 - (shape1) <br> 0.99 - (shape2) <br> 0.98 - (shape3) <br> | 0.97 - (shape1) <br> 0.98 - (shape2) <br> 0.99 - (shape3) <br> |
+
+----
+
+# 8) INTERPRETABILIDAD
+
+## 8.1) GRAD-CAM:
+	- 
+	- 
