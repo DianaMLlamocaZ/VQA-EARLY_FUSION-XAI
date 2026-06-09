@@ -104,3 +104,4 @@ El dataset [link]
 
 ----
 
+# 6) DISEÑO EXPERIMENTAL
