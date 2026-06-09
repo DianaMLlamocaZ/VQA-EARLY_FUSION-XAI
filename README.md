@@ -51,3 +51,6 @@
 
 # 4) DATASET
 El dataset [link]
+
+
+# 5) TRAINING PIPELINE
