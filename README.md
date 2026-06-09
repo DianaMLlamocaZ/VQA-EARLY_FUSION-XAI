@@ -7,6 +7,7 @@
 - Además, se utilizó *Grad-CAM*, un método de *Explainable AI (XAI)*, para visualizar las regiones de la imagen que más influyeron en la clasificación de la red neuronal convolucional.
 - Dado que las preguntas del *dataset* presentan una complejidad semántica manejable, se utilizó una arquitectura basada en *Bag of Words*, priorizando el análisis de los embeddings generados y la aplicación de técnicas de interpretabilidad (XAI).
 
+----
 
 # 2) ARQUITECTURA DEL MODELO
 
@@ -37,6 +38,8 @@
 - La representación fusionada se procesa mediante una red *feed-forward* compuesta por dos capas lineales:
     - La primera capa reduce la dimensionalidad de 32 a 16, seguida de una función de activación ReLU
     - La segunda capa proyecta de 16 a 13 dimensiones, correspondientes al número de clases o respuestas posibles.
+
+----
  
 # 3) TECH STACK
 
@@ -48,10 +51,12 @@
 - **Gráficas:** Matplotlib, SeaBorn
 - **Flask:** Diseño de APIs y aplicación
 
+----
 
 # 4) DATASET
 El dataset [link]
 
+----
 
 # 5) TRAINING PIPELINE
 
@@ -96,3 +101,6 @@ El dataset [link]
 - Función de pérdida: Cross-Entropy Loss
 - Kernels convolucionales: 16, 32 --> 32
 - Dimensiones de los embeddings de texto: 64 --> 128 --> 32
+
+----
+
