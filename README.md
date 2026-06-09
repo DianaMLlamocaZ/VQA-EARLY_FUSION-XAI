@@ -24,7 +24,8 @@
 </div>
 
 - La imagen está en formato RGB; por ello, el número de canales inicialmente es 3, a partir del cual se aplican los *kernels* de las capas convolucionales. 
-- **Kernels:** Se entrenaron modelos con diferentes tamaños de **kernels** en la primera capa convolucional: 16 y 32. Por ello, se detalla en la arquitectura. 
+- **Kernels:** Se entrenaron modelos con diferentes tamaños de **kernels** en la primera capa convolucional: 16 y 32. Por ello, se detalla en la arquitectura.
+- **MaxPool2D:** Para cada capa convolucional, se aplica la operación MaxPool seguida por la función de activación ReLU. 
 - **Flatten:** Se aplica la operación *flatten* a la última capa convolucional para convertir los *feature maps* en un vector y proyectarlo a una dimensión de 32 mediante una capa lineal, y realizar early fusion con los embeddings de texto mediante la multiplicación de vectores de ambas modalidades.
 
 ## 2.3) *FUSION STRATEGY*
@@ -36,3 +37,14 @@
 - La representación fusionada se procesa mediante una red *feed-forward* compuesta por dos capas lineales:
     - La primera capa reduce la dimensionalidad de 32 a 16, seguida de una función de activación ReLU
     - La segunda capa proyecta de 16 a 13 dimensiones, correspondientes al número de clases o respuestas posibles.
+ 
+# 3) TECH STACK
+
+- **Lenguaje de programación:** Python
+- **Deep Learning Framework y XAI:** PyTorch
+- **Preprocesamiento de datos (texto e imagen):** OpenCV, re
+- **Métricas de clustering y t-SNE:** Numpy, Spicy, Sklearn
+- **Almacenamiento de resultados:** json
+- **Gráficas:** Matplotlib, SeaBorn
+- **Flask:** Diseño de APIs y aplicación
+
