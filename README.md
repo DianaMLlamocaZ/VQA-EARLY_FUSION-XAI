@@ -139,4 +139,4 @@ El dataset [link]
   <sub>Figura: (izquierda) Histograma de Gradient Weights (derecha) Imagen y Heatmap.</sub>
 </p>
 
-	> **NOTA**: Los mapas de Grad-CAM utilizan una escala de colores donde las zonas en rojo/amarillo indican mayor importancia para la predicción del modelo, mientras que las zonas en azul o colores fríos representan menor contribución.
+> **NOTA**: Los mapas de Grad-CAM utilizan una escala de colores donde las zonas en rojo/amarillo indican mayor importancia para la predicción del modelo, mientras que las zonas en azul o colores fríos representan menor contribución.
