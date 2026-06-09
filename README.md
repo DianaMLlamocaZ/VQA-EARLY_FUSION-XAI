@@ -142,3 +142,6 @@ El dataset [link]
 </p>
 
 > **NOTA**: Los mapas de Grad-CAM utilizan una escala de colores donde las zonas en rojo/amarillo indican mayor importancia para la predicción del modelo, mientras que las zonas en azul o colores fríos representan menor contribución.
+
+
+## 8.2) VISUALIZACIÓN DE EMBEDDINGS DE TEXTO:
