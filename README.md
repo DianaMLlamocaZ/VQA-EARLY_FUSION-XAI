@@ -132,7 +132,8 @@ El dataset [link]
 - Para ello, se utilizaron *hooks* de Pytorch en la última capa convolucional, y se calculó el promedio los gradientes de cada *feature map* (**gradient weights**) para multiplicarlo con su mapa de características correspondiente:
 
 <p align="center">
-  <img src="./imgs/Gradient_Weights.JPG" width="400"/> <img src="/imgs/Heatmap.JPG" width="400"/> 
+  <img src="./imgs/Gradient_Weights.JPG" width="400"/>
+  <img src="./imgs/Heatmap.JPG" width="400"/>
 </p>
 
 <p align="center">
