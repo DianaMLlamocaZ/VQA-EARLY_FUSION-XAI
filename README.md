@@ -146,7 +146,7 @@ El dataset [link]
 
 ## 8.2) VISUALIZACIÓN DE EMBEDDINGS DE TEXTO:
 
-- Para evaluar la calidad de los embeddings del encoder de texto, se midió la similitud entre vectores utilizando *cosine similarity* y distancia euclidiana. Se calcularon métricas intra-cluster e inter-cluster para verificar que las preguntas de la misma clase tienden a agruparse y que existe separación entre clases.
+- Para evaluar la calidad de los embeddings del encoder de texto, se midió la similitud entre vectores utilizando *cosine similarity* y distancia euclidiana. Se calcularon métricas intra-cluster e inter-cluster, además de *Silhoutte Score*, para verificar que las preguntas de la misma clase tienden a agruparse y que existe separación entre clases.
 
 - Debido a que t-SNE no preserva distancias globales de forma fiable, se complementó el análisis visual con dichas métricas de distancia en el espacio de embeddings para validar cuantitativamente la estructura de los clusters. Los resultados de estas métricas confirman la existencia de una separación consistente entre clases en el espacio de embeddings.
 
