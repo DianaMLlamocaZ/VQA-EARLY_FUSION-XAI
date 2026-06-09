@@ -127,5 +127,5 @@ El dataset [link]
 # 8) INTERPRETABILIDAD
 
 ## 8.1) GRAD-CAM:
-	- 
-	- 
+- 
+- 
