@@ -129,7 +129,13 @@ El dataset [link]
 ## 8.1) GRAD-CAM:
 
 - Se aplicó Grad-CAM para visualizar las regiones de la imagen que más contribuyen a la predicción del modelo. Además, se utilizaron histogramas de activación para complementar el análisis de interpretabilidad.
-- Para ello, se utilizaron *hooks* de Pytorch en la última capa convolucional, y se calculó el promedio los gradientes de cada *feature map* para multiplicarlo con su mapa de características correspondiente:
+- Para ello, se utilizaron *hooks* de Pytorch en la última capa convolucional, y se calculó el promedio los gradientes de cada *feature map* (**gradient weights**) para multiplicarlo con su mapa de características correspondiente:
 
+<p align="center">
+  <img src="./images/Gradient_Weights.JPG" width="400"/> <img src="/images/Heatmap.JPG" width="400"/> 
+</p>
 
+<p align="center">
+  <sub>Figura: (izquierda) Histograma de Gradient Weights (derecha) Imagen y Heatmap.</sub>
+</p>
 
