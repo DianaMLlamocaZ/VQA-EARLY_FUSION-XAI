@@ -73,3 +73,26 @@ El dataset [link]
 
      	- Finalmente, el vector resultante se transforma en un tensor para el entrenamiento del modelo. 
 
+## 5.2) DIVISIÓN DE DATOS
+
+	- Del total de 38 000 muestras destinadas al entrenamiento, se utilizó el 80% para entrenamiento y el 20% restante para validación.
+	- Además, el conjunto de datos dispone de un conjunto independiente de 9k muestras utilizado exclusivamente para pruebas (test).
+
+## 5.3) ENTRENAMIENTO DE LOS MODELOS
+
+	- Cada modelo fue entrenado con un máximo de 50 épocas. Sin embargo, se empleó la técnica de **Early Stopping**; por ello, no todos los modelos llegaron a entrenar 50 épocas exactas.
+	- Se utilizó un tamaño de batch de 64 para los datos de *train, validation y test*.
+	- La optimización se realizó mediante el optimizador Adam.
+	- La función de pérdida utilizada fue Cross-Entropy Loss.
+	- Durante cada época, el modelo se entrenó con el conjunto de entrenamiento y se evaluó sobre el conjunto de validación.
+	- Se almacenó el modelo con mejor desempeño en validación para su posterior evaluación en el conjunto de prueba.
+
+## 5.4) HIPERPARÁMETROS
+
+	- Batch size (train, validation, test): 64
+	- Learning rate: 1e-4
+	- Número máximo de épocas: 50
+	- Optimizador: Adam
+	- Función de pérdida: Cross-Entropy Loss
+	- Kernels convolucionales: 16, 32 --> 32
+	- Dimensiones de los embeddings de texto: 64 --> 128 --> 32
