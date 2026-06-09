@@ -155,5 +155,5 @@ El dataset [link]
 - A continuación, se muestra la gráfica en el espacio de embeddings, con un *Silhoutte Score* de 0.72:
 
 <div align="center">
-	<img src="./imgs/Embeddings_Texto.JPG" width="400"/>
+	<img src="./imgs/Embeddings_Texto.JPG" width="500"/>
 </div>
