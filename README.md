@@ -162,6 +162,5 @@ El dataset [link]
 
 ## 9) MEJORAS FUTURAS
 
-- Se planea evaluar el modelo utilizando un dataset más realista y diverso, con el objetivo de analizar su comportamiento en condiciones más cercanas a escenarios del mundo real.
-- Esto permitirá estudiar cómo varía el desempeño del modelo ante mayor complejidad y variabilidad de los datos, así como su capacidad de generalización.
-
+- En versiones futuras, utilizaré un dataset más realista y diverso para analizar cómo varían los resultados del enfoque actual en condiciones más cercanas a escenarios del mundo real.
+- Esto me permitirá estudiar el impacto de una mayor complejidad y variabilidad de los datos, así como aplicar e incorporar nuevas técnicas para mejorar el desempeño del modelo.
