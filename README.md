@@ -127,5 +127,7 @@ El dataset [link]
 # 8) INTERPRETABILIDAD
 
 ## 8.1) GRAD-CAM:
-- 
-- 
+
+- Se aplicó Grad-CAM para visualizar las regiones de la imagen que más contribuyen a la predicción del modelo. Además, se utilizaron histogramas de activación para complementar el análisis de interpretabilidad.
+
+
