@@ -129,14 +129,15 @@ El dataset [link]
 ## 8.1) GRAD-CAM:
 
 - Se aplicó Grad-CAM para visualizar las regiones de la imagen que más contribuyen a la predicción del modelo. Además, se utilizaron histogramas de activación para complementar el análisis de interpretabilidad.
-- **RESUMEN:** Se utilizaron *hooks* en la última capa convolucional de PyTorch para obtener los mapas de características y sus gradientes. A partir de estos, se calcularon los pesos promedio de los gradientes (*gradient weights*), los cuales se utilizan para realizar una combinación ponderada de los *feature maps*. Finalmente, se aplica una activación ReLU para resaltar únicamente las contribuciones positivas asociadas a la clase predicha:
-
-<p align="center">
-  <img src="./imgs/Gradient_Weights.JPG" width="400"/> <img src="./imgs/Heatmap.JPG" width="400"/>
-</p>
-
-<p align="center">
-  <sub>Figura: (izquierda) Histograma de Gradient Weights (derecha) Imagen y Heatmap.</sub>
-</p>
+- **RESUMEN:** Se utilizaron *hooks* en la última capa convolucional de PyTorch para obtener los mapas de características y sus gradientes. A partir de estos, se calcularon los pesos promedio de los gradientes (*gradient weights*), los cuales se utilizan para realizar una combinación ponderada de los *feature maps*. Finalmente, se aplica una activación ReLU para resaltar únicamente las contribuciones positivas asociadas a la clase predicha.
+- A continuación, se muestra un ejemplo de la aplicación de Grad-CAM, que tiene como *input* la siguiente pregunta:
+  - "what color is the shape?:
+	<p align="center">
+	  <img src="./imgs/Gradient_Weights.JPG" width="400"/> <img src="./imgs/Heatmap.JPG" width="400"/>
+	</p>
+	
+	<p align="center">
+	  <sub>Figura: (izquierda) Histograma de Gradient Weights (derecha) Imagen y Heatmap.</sub>
+	</p>
 
 > **NOTA**: Los mapas de Grad-CAM utilizan una escala de colores donde las zonas en rojo/amarillo indican mayor importancia para la predicción del modelo, mientras que las zonas en azul o colores fríos representan menor contribución.
