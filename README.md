@@ -57,7 +57,7 @@ El dataset [link]
 
 ## 5.1) PREPROCESAMIENTO:
 
-	 **5.1.1) Imágenes:**
+   **5.1.1) Imágenes:**
     - Se realiza un resize de 64x64.
     - Se reescala a un rango de 0-1.
 		- Posteriormente, se convierte en un tensor para entrenar el modelo.
