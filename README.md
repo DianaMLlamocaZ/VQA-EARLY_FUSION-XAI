@@ -146,7 +146,7 @@ El dataset [link]
 > **NOTA**: Los mapas de Grad-CAM utilizan una escala de colores donde las zonas en rojo/amarillo indican mayor importancia para la predicción del modelo, mientras que las zonas en azul o colores fríos representan menor contribución.
 
 
-## 8.2) VISUALIZACIÓN DE EMBEDDINGS DE TEXTO:
+## 8.2) VISUALIZACIÓN DE EMBEDDINGS DE TEXTO
 
 - Para evaluar la calidad de los embeddings del encoder de texto, se midió la similitud entre vectores utilizando *cosine similarity* y distancia euclidiana. Se calcularon métricas intra-cluster e inter-cluster, además de *Silhoutte Score*, para verificar que las preguntas de la misma clase tienden a agruparse y que existe separación entre clases.
 
@@ -157,3 +157,11 @@ El dataset [link]
 <div align="center">
 	<img src="./imgs/Embeddings_Texto.JPG" width="500"/>
 </div>
+
+----
+
+## 9) MEJORAS FUTURAS
+
+- Se planea evaluar el modelo utilizando un dataset más realista y diverso, con el objetivo de analizar su comportamiento en condiciones más cercanas a escenarios del mundo real.
+- Esto permitirá estudiar cómo varía el desempeño del modelo ante mayor complejidad y variabilidad de los datos, así como su capacidad de generalización.
+
