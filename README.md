@@ -80,8 +80,8 @@ El dataset [link]
 
 ## 5.2) DIVISIÓN DE DATOS
 
-	- Del total de 38 000 muestras destinadas al entrenamiento, se utilizó el 80% para entrenamiento y el 20% restante para validación.
-	- Además, el conjunto de datos dispone de un conjunto independiente de 9k muestras utilizado exclusivamente para pruebas (test).
+- Del total de 38 000 muestras destinadas al entrenamiento, se utilizó el 80% para entrenamiento y el 20% restante para validación.
+- Además, el conjunto de datos dispone de un conjunto independiente de 9k muestras utilizado exclusivamente para pruebas (test).
 
 ## 5.3) ENTRENAMIENTO DE LOS MODELOS
 
