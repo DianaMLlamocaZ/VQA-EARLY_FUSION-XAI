@@ -9,6 +9,14 @@
 - Finalmente, se utilizó *Flask* para la creación de APIs y una aplicación que permita al usuario interactuar con el modelo.
 ----
 
+# 1.1) DEMOSTRACIÓN
+
+<div align="center">
+	<img src="./imgs/Interfaz.JPG">
+</div>
+
+----
+
 # 2) ARQUITECTURA DEL MODELO
 
 ## 2.1) *TEXT ENCODER*
