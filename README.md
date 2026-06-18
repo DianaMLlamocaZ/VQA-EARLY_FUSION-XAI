@@ -15,6 +15,8 @@
 	<img src="./imgs/Interfaz.JPG">
 </div>
 
+En esta imagen, se muestra la aplicación en funcionamiento, en la cual se ingresa la pregunta y la imagen, y se muestra la predicción del modelo, incluyendo el *heatmap* para visualizar la región de la imagen que más influyó en la clasificación.
+
 ----
 
 # 2) ARQUITECTURA DEL MODELO
