@@ -72,7 +72,7 @@ El dataset [link]
 	 
 - **5.1.2) Texto:**
      
-- Se realiza una tokenización a nivel de palabra, considerando también incluyendo el signo de puntuación ? como un token independiente.
+- Se realiza una tokenización a nivel de palabra, considerando también el signo de puntuación *?* como un token independiente.
 
   - Cada texto de entrada se convierte en un vector numérico utilizando la técnica *Bag of Words*.
 
