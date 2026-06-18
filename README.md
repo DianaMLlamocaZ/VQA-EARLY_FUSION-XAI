@@ -16,7 +16,7 @@
 </div>
 
 - En esta imagen, se muestra la aplicación en funcionamiento, en la cual se ingresan la pregunta e imagen, y se muestra la predicción del modelo, incluyendo el *heatmap* para visualizar la región de la imagen que más influyó en la clasificación.
-- Asimismo, también se pueden visualizar los *embeddings* de texto en un espacio de dos dimensiones con el objetivo de entender la proximidad entre preguntas con temas similares y distintos.
+- Asimismo, también se pueden visualizar los *embeddings* de texto en un espacio de dos dimensiones con el objetivo de graficar la proximidad entre preguntas con temas similares y distintos.
 
 ----
 
