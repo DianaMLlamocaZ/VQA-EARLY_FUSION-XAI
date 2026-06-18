@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TSNE Dashboard</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+/* ===== INPUT GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 160px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+}
+
+/* ===== BOTÓN ===== */
+button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #007bff;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* ===== RESULTADO LAYOUT ===== */
+.result-wrapper {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+/* gráfico */
+.plot-box {
+    flex: 2;
+    text-align: center;
+}
+
+.plot-box img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* métricas */
+.metrics-box {
+    flex: 1;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.metric-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.silhouette {
+    font-size: 22px;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+/* tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #eef2ff;
+}
+
+/*Css para la explicación del rango de las métricas*/
+.note {
+    font-size: 13px;
+    color: #4b5563;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+/*Warning box*/
+.hidden {
+    display: none;
+}
+
+.warning-box {
+    margin-top: 15px;
+    padding: 12px;
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>t-SNE Sentence Dashboard</h1>
+
+
+<form method="POST">
+
+<div class="grid">
+
+    <div class="card">
+        <h3>Color</h3>
+        <textarea name="color"
+        placeholder="what color is the rectangle? | what color is the triangle?"></textarea>
+    </div>
+
+    <div class="card">
+        <h3>Shape</h3>
+        <textarea name="shape"
+        placeholder="what shape is present? | what shape is in the image?"></textarea>
+    </div>
+
+    <div class="card">
+        <h3>Present</h3>
+        <textarea name="present"
+        placeholder="is a rectangle present? | is there a triangle?"></textarea>
+    </div>
+
+</div>
+
+<div id="warning" class="hidden warning-box">
+    Debes ingresar las preguntas antes de generar el t-SNE
+</div>
+<button type="submit">Generar t-SNE</button>
+
+</form>
+
+<!--RESULTADO-->
+{% if scatter %}
+<div class="result-wrapper">
+
+    <!--IZQUIERDA:Gráfica t-SNE-->
+    <div class="plot-box">
+        <h2>t-SNE Visualization</h2>
+        <img src="data:image/jpeg;base64,{{ scatter }}">
+    </div>
+
+    <!--DERECHA: MÉTRICAS-->
+    <div class="metrics-box">
+
+        <h2>Métricas</h2>
+
+        <!--SILHOUETTE-->
+        <div class="metric-title">Silhouette Score</div>
+        <div class="silhouette">{{ "%.4f"|format(silhoutte_score) }}</div>
+
+        <div class="note">
+            El Silhouette Score mide qué tan bien están separados los clusters.<br><br>
+            - Valores cercanos a <b>1</b>: clusters muy bien separados (alta similitud intra-cluster y baja inter-cluster)<br>
+            - Valores cercanos a <b>0</b>: clusters solapados<br>
+            - Valores negativos: asignación incorrecta de clusters
+        </div>
+
+        ======
+
+        <!--TABLA-->
+        <table>
+            <thead>
+                <tr>
+                    <div class="metric-title">Cosine Distance Intra-Inter Cluster</div>
+                    <th>Cluster</th>
+                    <th>Intra</th>
+                    <th>Inter</th>
+                </tr>
+
+
+            </thead>
+            <tbody>
+                {% for i in range(order|length) %}
+                <tr>
+                    <td>{{ order[i] }}</td>
+                    <td>{{ "%.4f"|format(intra_cos_sim[i][0]) }}</td>
+                    <td>{{ "%.4f"|format(inter_cos_sim[i][0]) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+            <div class="note">
+                - Valores cercanos a <b>0</b>: vectores muy similares (alta similitud, baja distancia)<br>
+                - Valores cercanos a <b>1</b>: vectores sin relación (ortogonales)<br>
+                - Valores cercanos a <b>2</b>: vectores completamente opuestos (máxima distancia)
+            </div>
+
+        </table>
+    </div>
+
+</div>
+{% endif %}
+
+<!--Volver al inicio-->
+<a href="/" style="
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 16px;
+    background:#6c757d;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    text-align:center;
+    width:100%;">
+        Volver al inicio
+</a>
+
+</div>
+
+</body>
+</html>
+
+
+<script>
+    document.querySelector("form").addEventListener("submit", function (e) {
+
+        const color=document.querySelector("textarea[name='color']").value.trim();
+        const shape=document.querySelector("textarea[name='shape']").value.trim();
+        const present=document.querySelector("textarea[name='present']").value.trim();
+
+        if (!color && !shape && !present) {
+            e.preventDefault(); //no se envía el formulario si NO es recibe el input
+
+            document.getElementById("warning").classList.remove("hidden");
+        }
+    });
+</script>
