@@ -217,6 +217,64 @@ proyecto_root
 |--- main.py
 |--- functions_utils.py
 ```
+----
+
+## INSTALACIÓN Y EJECUCIÓN LOCAL
+Para ejecutar el programa de forma local, sigue los pasos descritos:
+
+### **Ubuntu**
+- Clonar el repositorio (recomendado en el escritorio):
+```bash
+git clone (link_del_repo)
+```
+
+- Entrar a la carpeta donde clonaste el repositorio:
+```bash
+cd [Ruta_donde_clonaste_el_repositorio]
+```
+- Crear el environment (en esa misma carpeta):
+```bash
+python3 -m venv vqa-xai-env
+```
+- Activar el environment:
+```bash
+source vqa-xai-env/bin/activate
+```
+- Instalar las librerías necesarias:
+```bash
+pip install -r requirements.txt
+``` 
+- Ejecutar la aplicación:
+```bash
+python main.py
+``` 
+
+### **Windows**
+- Clonar el repositorio (recomendado en el escritorio):
+```bash
+git clone (link_del_repo)
+```
+
+- Entrar a la carpeta donde clonaste el repositorio:
+```bash
+cd [Ruta_donde_clonaste_el_repositorio]
+```
+- Crear el environment (en esa misma carpeta):
+```bash
+python -m venv vqa-xai-env
+```
+- Activar el environment:
+```bash
+.\vqa-xai-env\Scripts\activate
+```
+- Instalar las librerías necesarias:
+```bash
+pip install -r requirements.txt
+``` 
+- Ejecutar la aplicación:
+```bash
+python main.py
+```
 
 ----
 
