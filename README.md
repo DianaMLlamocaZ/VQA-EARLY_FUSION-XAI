@@ -217,6 +217,43 @@ proyecto_root
 |--- main.py
 |--- functions_utils.py
 ```
+
+- **src**:
+  - Esta carpeta contiene los archivos para entrenar y evaluar modelos propios de manera local.
+ 
+- **utils**:
+  - Contiene funciones auxiliares para la carga de datos, preprocesamiento, entrenamiento, evaluación, entre otros.
+
+- **visualization**:
+  - Contienen los archivos para visualizar el *heatmap*, los *embeddings* y ambas *loss* del entrenamiento y validación.
+
+- **embeddings_metrics**:
+  - Archivo que contiene las métricas de los *embeddings* y las calcula: *Silhoute Score*, Cosine Distance, Distancia Euclidiana.
+ 
+- **xai**:
+  - Contiene el algoritmo Grad-CAM implementado desde cero para el cálculo del *heatmap*.
+
+- **architecture_models**:
+  - Contiene las arquitecturas de los modelos entrenados que deben instanciarse.
+
+- **data**:
+  - Contiene la data de *train* y *test*.
+ 
+- **results**:
+  - Aquí se almacenan los archivos en formato .json del *loss* del entrenamiento y validación.
+ 
+- **saved_models**:
+  - Contiene los pesos de los tres modelos entrenados.
+ 
+ - **templates**:
+   - Contiene los archivos *.html* utilizados para la interfaz de la aplicación
+  
+- **main.py**:
+  - Contiene las APIs de la aplicación y la integración del *backend* y *frontend*.
+
+- **functions_utils.py**:
+  - Contiene funciones auxiliares para la integración del *backend* y *frontend*.  
+
 ----
 
 ## INSTALACIÓN Y EJECUCIÓN LOCAL
