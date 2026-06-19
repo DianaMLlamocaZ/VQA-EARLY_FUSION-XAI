@@ -164,7 +164,7 @@ El dataset [link]
 
 - Debido a que t-SNE no preserva distancias globales de forma fiable, se complementó el análisis visual con dichas métricas de distancia en el espacio de embeddings para validar cuantitativamente la estructura de los clusters. Los resultados de estas métricas confirman la existencia de una separación consistente entre clases en el espacio de embeddings.
 
-- A continuación, se muestra la gráfica en el espacio de embeddings, con un *Silhoutte Score* de 0.72:
+- A continuación, se muestra la gráfica en el espacio de embeddings, con un *Silhouette Score* de 0.72:
 
 <div align="center">
 	<img src="./imgs/Embeddings_Texto.JPG" width="500"/>
