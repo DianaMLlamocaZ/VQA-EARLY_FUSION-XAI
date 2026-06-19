@@ -6,7 +6,8 @@
 - Asimismo, se emplearon métricas de *clustering* como *Silhoutte Score* (intra-inter cluster) para medir la agrupación entre *embeddings* de texto respecto a temas/preguntas y su visualización en un espacio bidimensional mediante el algoritmo t-SNE.
 - Además, se utilizó *Grad-CAM*, un método de *Explainable AI (XAI)*, para visualizar las regiones de la imagen que más influyeron en la clasificación de la red neuronal convolucional.
 - Dado que las preguntas del *dataset* presentan una complejidad semántica manejable, se utilizó una arquitectura basada en *Bag of Words*, priorizando el análisis de los embeddings generados y la aplicación de técnicas de interpretabilidad (XAI).
-- Finalmente, se utilizó *Flask* para la creación de APIs y una aplicación que permita al usuario interactuar con el modelo.
+- Finalmente, se utilizó *Flask* para la creación de APIs y una aplicación que permita al usuario interactuar con el modelo. Dado que el *dataset* con que se entrenó el modelo está en inglés, la interacción del modelo mediante la aplicación deben estar en el mismo idioma.
+  
 ----
 
 # 1.1) DEMOSTRACIÓN
