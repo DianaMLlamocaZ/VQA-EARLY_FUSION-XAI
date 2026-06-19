@@ -225,7 +225,7 @@ proyecto_root
   - Contiene funciones auxiliares para la carga de datos, preprocesamiento, entrenamiento, evaluación, entre otros.
 
 - **visualization**:
-  - Contienen los archivos para visualizar el *heatmap*, los *embeddings* y ambas *loss* del entrenamiento y validación.
+  - Contienen los archivos para visualizar el *heatmap*, los *embeddings* y ambas *losses* del entrenamiento y validación.
 
 - **embeddings_metrics**:
   - Archivo que contiene las métricas de los *embeddings* y las calcula: *Silhoute Score*, Cosine Distance, Distancia Euclidiana.
