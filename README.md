@@ -171,7 +171,56 @@ El dataset [link]
 
 ----
 
-## 9) MEJORAS FUTURAS
+# 9) ESTRUCTURA DEL PROYECTO
+```plaintext
+proyecto_root
+|
+|--- src/
+|    |--- eda.py
+|    |--- load_dataset.py
+|    |--- load_dataloaders.py
+|    |--- train.py
+|    |--- models.py
+|    |--- evaluate_validation_dataset.py
+|    |--- test_eval_final.py
+|
+|--- utils/
+|    |--- utils.py
+|
+|--- visualization/
+|    |--- visualization_heatmap_cnn.py
+|    |--- visualization_tnse.py
+|    |--- visualization_loss.py
+|
+|--- embedding_metrics/
+|    |--- emb_similarity.py
+|
+|--- xai/
+|    |--- grad_cam.py
+|
+|--- architecture_models/
+|    |--- vqa_with_class_weights_and_layer_norm.py
+|    |--- vqa_with_out_class_weigths.py
+|
+|--- data/
+|
+|--- results/
+|    |--- archivos .json
+|
+|--- saved_models/
+|    |--- pesos de los modelos .pth 
+|
+|--- templates/
+|    |--- emb_visualization.html
+|    |--- main_interface.html
+|
+|--- main.py
+|--- functions_utils.py
+```
+
+----
+
+## MEJORAS FUTURAS
 
 - En versiones futuras, utilizaré un dataset más realista y diverso para analizar cómo varían los resultados del enfoque actual en condiciones más cercanas a escenarios del mundo real.
 - Esto me permitirá estudiar el impacto de una mayor complejidad y variabilidad de los datos, así como aplicar e incorporar nuevas técnicas para mejorar el desempeño del modelo.
